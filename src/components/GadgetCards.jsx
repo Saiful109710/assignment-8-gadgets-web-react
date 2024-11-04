@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const GadgetCards = ({gadget}) => {
   console.log(gadget)
@@ -10,7 +11,7 @@ const GadgetCards = ({gadget}) => {
         </div>
         <h2 className='text-lg font-bold'>{product_title}</h2>
         <p className='text-gray-700 font-semibold'>Price: {price}</p>
-        <button className='btn bg-transparent border text-purple-700 border-[#9538E2] hover:bg-[#9538E2] hover:text-white'>View Details</button>
+        <Link to={`/gadgets/${gadget.id}`}><button className='btn bg-transparent border text-purple-700 border-[#9538E2] hover:bg-[#9538E2] hover:text-white'>View Details</button></Link>
     </div>
   )
 }

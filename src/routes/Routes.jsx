@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import GadgetCards from "../components/GadgetCards";
 import AllGadgetsData from "../components/AllGadgetsData";
 import AllGadgetsCard from "../pages/AllGadgetsCard";
+import GadgetDetails from "../pages/GadgetDetails";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
                 path:'/allGadgets',
                 element:<AllGadgetsCard></AllGadgetsCard>,
                 loader:()=>fetch('../allGadgets.json')
+            },
+            {
+                path:'/gadgets/:id',
+                element:<GadgetDetails></GadgetDetails>,
+                loader:()=>fetch('../allGadgets.json'),
             }
         ]
     },

@@ -208,7 +208,7 @@
             "Single 12MP camera",
             "64GB storage"
         ],
-        "availability": true,
+        "availability": false,
         "rating": 4.4
     },
     {
@@ -241,7 +241,7 @@
             "1TB SSD",
             "NVIDIA GeForce RTX 3060"
         ],
-        "availability": true,
+        "availability": false,
         "rating": 4.7
     },
     {
@@ -273,7 +273,7 @@
             "Sleep Tracking",
             "Water resistant up to 50 meters"
         ],
-        "availability": true,
+        "availability": false,
         "rating": 4.4
     },
     {
