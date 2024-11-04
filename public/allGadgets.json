@@ -1,0 +1,330 @@
+[
+    {
+        "id": 1,
+        "product_title": "Apple iPhone 15 Pro Max",
+        "product_image": "https://i.ibb.co.com/kg0Lhx1/iphone-15-pro-max.jpg",
+        "category": "iPhone",
+        "price": 1299,
+        "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+        "specification": [
+            "6.7-inch Super Retina XDR display",
+            "A17 Bionic chip",
+            "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+            "LiDAR Scanner",
+            "Up to 2TB storage"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "id": 2,
+        "product_title": "Apple iPhone 14",
+        "product_image": "https://i.ibb.co.com/HxVSCzr/iphone-14.jpg",
+        "category": "iPhone",
+        "price": 899,
+        "description": "Powerful iPhone 14 with excellent camera and performance.",
+        "specification": [
+            "6.1-inch Super Retina XDR display",
+            "A15 Bionic chip",
+            "Dual-camera system (12MP Main, 12MP Ultra-wide)",
+            "Up to 512GB storage"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "id": 3,
+        "product_title": "Apple MacBook Pro 14-inch",
+        "product_image": "https://i.ibb.co.com/yWNx6bF/macbook.jpg",
+        "category": "MacBook",
+        "price": 1999,
+        "description": "Powerful performance for professionals.",
+        "specification": [
+            "14-inch Liquid Retina XDR display",
+            "M1 Pro chip",
+            "16GB RAM",
+            "512GB SSD",
+            "MagSafe 3 charging"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "id": 4,
+        "product_title": "Apple MacBook Air 13-inch",
+        "product_image": "https://i.ibb.co.com/b6RFCb1/macbook-13inch.jpg",
+        "category": "MacBook",
+        "price": 999,
+        "description": "Lightweight and powerful MacBook Air with M1 chip.",
+        "specification": [
+            "13.3-inch Retina display",
+            "M1 chip",
+            "8GB RAM",
+            "256GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "id": 5,
+        "product_title": "Samsung Galaxy S23 Ultra",
+        "product_image": "https://i.ibb.co.com/VHzfyQB/smsung-s-23-ultra.jpg",
+        "category": "Smartphones",
+        "price": 1199,
+        "description": "The next level of mobile innovation with Galaxy S23 Ultra.",
+        "specification": [
+            "6.8-inch Dynamic AMOLED 2X display",
+            "Snapdragon 8 Gen 2",
+            "Quad-camera system (200MP Main, 12MP Ultra-wide, 10MP Telephoto, 10MP Periscope)",
+            "S Pen integration",
+            "Up to 1TB storage"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "id": 6,
+        "product_title": "Google Pixel 7",
+        "product_image": "https://i.ibb.co.com/fvKdgVm/google-pixel-7.jpg",
+        "category": "Smartphones",
+        "price": 799,
+        "description": "Google's powerful Pixel 7 with great camera features.",
+        "specification": [
+            "6.3-inch OLED display",
+            "Google Tensor G2 chip",
+            "50MP Wide, 12MP Ultra-wide cameras",
+            "Up to 256GB storage"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "id": 7,
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.ibb.co.com/hyBsTqr/dell-xps-13.jpg",
+        "category": "Laptops",
+        "price": 1200,
+        "description": "Compact and powerful Dell XPS 13.",
+        "specification": [
+            "13.4-inch FHD+ display",
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "id": 8,
+        "product_title": "HP Spectre x360",
+        "product_image": "https://i.ibb.co.com/NT6gP86/HP-Specture-x360.jpg",
+        "category": "Laptops",
+        "price": 1300,
+        "description": "Versatile HP Spectre x360 with 2-in-1 design.",
+        "specification": [
+            "13.5-inch OLED display",
+            "Intel Core i5",
+            "8GB RAM",
+            "256GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "id": 9,
+        "product_title": "Apple Watch Series 8",
+        "product_image": "https://i.ibb.co.com/bd77PjD/Apple-watch-8.jpg",
+        "category": "Smart Watches",
+        "price": 399,
+        "description": "The future of health is on your wrist.",
+        "specification": [
+            "Always-On Retina display",
+            "Heart Rate and Blood Oxygen Monitoring",
+            "Sleep Tracking",
+            "Fitness Tracking",
+            "Water resistant up to 50 meters"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "id": 10,
+        "product_title": "Samsung Galaxy Watch 5",
+        "product_image": "https://i.ibb.co.com/sCKtfV9/samsung-watch.jpg",
+        "category": "Smart Watches",
+        "price": 350,
+        "description": "Advanced health tracking with Galaxy Watch 5.",
+        "specification": [
+            "AMOLED display",
+            "ECG and blood pressure monitoring",
+            "Sleep and fitness tracking",
+            "GPS and LTE connectivity"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "id": 11,
+        "product_title": "Anker PowerCore 10000",
+        "product_image": "https://i.ibb.co.com/2FKsTkf/Anker-Power-Core-1000.jpg",
+        "category": "Accessories",
+        "price": 25,
+        "description": "Compact and high-capacity portable charger.",
+        "specification": [
+            "10000mAh capacity",
+            "PowerIQ and VoltageBoost technology",
+            "Ultra-compact design",
+            "Multiple device compatibility"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "id": 12,
+        "product_title": "Logitech MX Master 3 Mouse",
+        "product_image": "https://i.ibb.co.com/n7DYcrT/logiteach-master-mouse.jpg",
+        "category": "Accessories",
+        "price": 100,
+        "description": "High precision wireless mouse.",
+        "specification": [
+            "Advanced tracking sensor",
+            "Customizable buttons",
+            "Ergonomic design",
+            "Bluetooth and USB connectivity"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "id": 13,
+        "product_title": "Apple iPhone SE (3rd Gen)",
+        "product_image": "https://i.ibb.co.com/LnB4kgj/apple-iphone-se.jpg",
+        "category": "iPhone",
+        "price": 429,
+        "description": "Compact iPhone SE with A15 chip.",
+        "specification": [
+            "4.7-inch Retina HD display",
+            "A15 Bionic chip",
+            "Single 12MP camera",
+            "64GB storage"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "id": 14,
+        "product_title": "Apple MacBook Pro 16-inch",
+        "product_image": "https://i.ibb.co.com/hXsv8sc/macbook-16-inch.jpg",
+        "category": "MacBook",
+        "price": 2499,
+        "description": "Large display and performance for professionals.",
+        "specification": [
+            "16-inch Liquid Retina XDR display",
+            "M1 Max chip",
+            "32GB RAM",
+            "1TB SSD"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "id": 15,
+        "product_title": "ASUS ROG Zephyrus G14",
+        "product_image": "https://i.ibb.co.com/gTFY51C/Asus-Rog-Zephyrus-g14.jpg",
+        "category": "Laptops",
+        "price": 1600,
+        "description": "High-performance gaming laptop with compact design.",
+        "specification": [
+            "14-inch WQHD display",
+            "AMD Ryzen 9",
+            "16GB RAM",
+            "1TB SSD",
+            "NVIDIA GeForce RTX 3060"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "id": 16,
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.ibb.co.com/QHWsJBf/Sony-WH-1000-X5-Headset.jpg",
+        "category": "Accessories",
+        "price": 349,
+        "description": "Industry-leading noise cancelling headphones.",
+        "specification": [
+            "Over-ear design",
+            "Adaptive noise cancelling",
+            "30-hour battery life",
+            "Touch controls"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "id": 17,
+        "product_title": "Apple Watch SE",
+        "product_image": "https://i.ibb.co.com/XSZwSyG/Apple-watch-se.jpg",
+        "category": "Smart Watches",
+        "price": 279,
+        "description": "Affordable option for Apple Watch features.",
+        "specification": [
+            "Retina display",
+            "Heart Rate and GPS",
+            "Sleep Tracking",
+            "Water resistant up to 50 meters"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "id": 18,
+        "product_title": "Microsoft Surface Laptop Studio",
+        "product_image": "https://i.ibb.co.com/DQZhyXV/surface-laptop.jpg",
+        "category": "Laptops",
+        "price": 1599,
+        "description": "Versatile laptop with studio mode.",
+        "specification": [
+            "14.4-inch PixelSense display",
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "2-in-1 functionality"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "id": 19,
+        "product_title": "Apple iPhone 13 Mini",
+        "product_image": "https://i.ibb.co.com/6RTxYGn/iphone-13-mini.jpg",
+        "category": "iPhone",
+        "price": 699,
+        "description": "Compact iPhone 13 Mini with dual cameras.",
+        "specification": [
+            "5.4-inch Super Retina XDR display",
+            "A15 Bionic chip",
+            "Dual 12MP cameras"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "id": 20,
+        "product_title": "Apple MacBook Air 15-inch",
+        "product_image": "https://i.ibb.co.com/Y3N8xHg/macbook-air-15-inch.jpg",
+        "category": "MacBook",
+        "price": 1499,
+        "description": "Large-screen MacBook Air with lightweight design.",
+        "specification": [
+            "15-inch Retina display",
+            "M2 chip",
+            "8GB RAM",
+            "512GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.8
+    }
+]
+
+
+
