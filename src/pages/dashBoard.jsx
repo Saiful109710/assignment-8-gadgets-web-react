@@ -17,7 +17,7 @@ const DashBoard = () => {
           
           title="Dash Board"
           subtitle={
-            "Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"
+            "Discover cutting-edge gadgets designed to elevate your everyday life. From innovative smart devices to essential accessories, explore the tech that brings ease and excitement to your world."
           }
         ></Heading>
         <div className='flex justify-center gap-5'>

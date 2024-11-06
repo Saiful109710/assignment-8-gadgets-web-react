@@ -55,7 +55,7 @@ const GadgetDetails = () => {
           id={id}
           title="Product Details"
           subtitle={
-            "Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"
+            "Get detailed insights on the latest gadgets, including specifications, pricing, availability, and ratings. Easily add items to your cart or wishlist to enhance your shopping experience."
           }
         ></Heading>
       </div>
