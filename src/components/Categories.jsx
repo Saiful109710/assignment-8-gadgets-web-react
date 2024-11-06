@@ -11,7 +11,7 @@ const Categories = () => {
         
              <NavLink to='/' className={({isActive})=>`p-2  rounded-2xl text-center ${isActive?'bg-purple-700 text-white':'bg-gray-200'}`}>All Products</NavLink>
             {
-                categories.map((category)=><NavLink onClick={()=>setPathName(category.category.split(' ').join(''))}  to={`/categories/${category.category.split(' ').join('')}`} key={category.id} className={({isActive})=>`p-2  rounded-2xl text-center ${isActive?'bg-purple-700 text-white':'bg-gray-200'}`}>{category.category}</NavLink>)
+                categories.map((category)=><NavLink onClick={()=>{setPathName(category.category.split(' ').join(''));document.title=`Gadget - ${category.category}`}}  to={`/categories/${category.category.split(' ').join('')}`} key={category.id} className={({isActive})=>`p-2  rounded-2xl text-center ${isActive?'bg-purple-700 text-white':'bg-gray-200'}`}>{category.category}</NavLink>)
             } 
         
 

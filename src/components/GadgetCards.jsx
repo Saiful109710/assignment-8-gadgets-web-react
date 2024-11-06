@@ -12,7 +12,7 @@ const GadgetCards = ({gadget}) => {
         </div>
         <h2 className='text-lg font-bold'>{product_title}</h2>
         <p className='text-gray-700 font-semibold'>Price: {price}</p>
-        <button onClick={()=>navigate(`/gadgets/${gadget.id}`)} className='btn bg-transparent border text-purple-700 border-[#9538E2] hover:bg-[#9538E2] hover:text-white'>View Details</button>
+        <button onClick={()=>{navigate(`/gadgets/${gadget.id}`);document.title='Gadget - Details'}} className='btn bg-transparent border text-purple-700 border-[#9538E2] hover:bg-[#9538E2] hover:text-white'>View Details</button>
     </div>
   )
 }

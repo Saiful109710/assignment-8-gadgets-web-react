@@ -1,7 +1,7 @@
 // get local storage
 
-const getToLocalStorage = ()=>{
-    const storedData = localStorage.getItem('gadget');
+const getToLocalStorage = (key)=>{
+    const storedData = localStorage.getItem(key);
     if(storedData){
         return JSON.parse(storedData)
     }else{
@@ -9,19 +9,27 @@ const getToLocalStorage = ()=>{
     }
 }
 
-const setToLocalStorage=(gadget)=>{
+const setToLocalStorage=(key,gadget)=>{
     console.log(gadget)
-    const storedData = getToLocalStorage();
+    const storedData = getToLocalStorage(key);
     if(storedData.find((singleGadget)=>singleGadget.id===gadget.id)){
-        alert("gadget already added")
+        alert(`item already added in ${key}`)
     }else{
         storedData.push(gadget)
-        localStorage.setItem('gadget',JSON.stringify(storedData))
+        localStorage.setItem(key,JSON.stringify(storedData))
     }
 
 }
 
-export {getToLocalStorage,setToLocalStorage}
+const removeFromLocalStorageData = (key,id)=>{
+
+    const storedData = getToLocalStorage(key);
+    const remainingData = storedData.filter((singleData)=>singleData.id !==id);
+    localStorage.setItem(key,JSON.stringify(remainingData))
+
+}
+
+export {getToLocalStorage,setToLocalStorage,removeFromLocalStorageData}
 
 // set local storage
 

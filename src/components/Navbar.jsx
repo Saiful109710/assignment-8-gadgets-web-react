@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { IoCartOutline } from "react-icons/io5";
+import { FaRegHeart } from "react-icons/fa";
+import { getToLocalStorage } from "../Utility/addToDb";
+
+
 
 const Navbar = () => {
   const {pathname} = useLocation();
+  const [cart,setCart] = useState([])
+  const [wishlist,setWishlist] = useState([]);
+  const [cartCount,setCartCount] = useState(0);
+  const [wishlistCount,setWishlistCount] = useState(0)
+
+
+  useEffect(()=>{
+        setCart(getToLocalStorage('cart'));
+        setWishlist(getToLocalStorage('wishlist'));
+
+        
+  },[])
+
+  useEffect(()=>{
+      setCartCount(cart.length);
+      setWishlistCount(wishlist.length)
+  },[cart,wishlist])
+
+  console.log(cartCount,wishlistCount)
+
+  
+
+  
+  
   return (
     <div className={`navbar ${pathname==='/'?'text-white':''}`}>
       <div className="navbar-start">
@@ -27,22 +56,28 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/statistics'>Statisics</NavLink>
-            <NavLink to='/dashboard'>Dashboard</NavLink>
+                       <NavLink onClick={()=>document.title='Gadget - Home'} to='/' className={({isActive})=>`font-bold ${isActive?'text-purple-200':''}`}>Home</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Statistics'} to='/statistics' className={({isActive})=>`font-bold ${isActive?'text-purple-700':''}`}>Statisics</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Dashboard'} to='/dashboard' className={({isActive})=>`font-bold ${isActive?'text-purple-700':''}`}>Dashboard</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Contact'} to='/Contact' className={({isActive})=>`font-bold ${isActive?'text-purple-700':''}`}>Contact</NavLink>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+        <NavLink to={'/'} className={({isActive})=>`btn btn-ghost text-xl ${isActive?'':'text-purple-700'}`}>Gadget Heaven</NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-3">
-               <NavLink to='/'>Home</NavLink>
-                <NavLink to='/statistics'>Statisics</NavLink>
-                <NavLink to='/dashboard'>Dashboard</NavLink>
+           <NavLink onClick={()=>document.title='Gadget - Home'} to='/' className={({isActive})=>`font-bold ${isActive?'text-purple-200':''}`}>Home</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Statistics'} to='/statistics' className={({isActive})=>`font-bold ${isActive?'text-purple-700':''}`}>Statisics</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Dashboard'} to='/dashboard' className={({isActive})=>`font-bold ${isActive?'text-purple-700':''}`}>Dashboard</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Contact'} to='/Contact' className={({isActive})=>`font-bold ${isActive?'text-purple-700':''}`}>Contact</NavLink>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-3">
+          <NavLink to='/dashboard/cart' className={'relative'}><button className="btn rounded-full "><IoCartOutline></IoCartOutline></button>
+          <span className="absolute right-0 top-0 p-1 bg-purple-700 text-white rounded-full text-[10px] font-bold">{cartCount}</span></NavLink>
+          <NavLink to='/dashboard/wishlist' className={'relative'}><button className="btn rounded-full "><FaRegHeart></FaRegHeart></button>
+          <span className="absolute right-0 top-0 p-1 bg-purple-700 text-white rounded-full text-[10px] font-bold">{wishlistCount}</span></NavLink>
+
       </div>
     </div>
   );

@@ -4,16 +4,18 @@ import Heading from "../components/Heading";
 import { IoMdCart } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa";
 import { DashBoardContext } from "../App";
-import { setToLocalStorage } from "../Utility/addToDb";
+import { getToLocalStorage, setToLocalStorage } from "../Utility/addToDb";
 
 
 
 const GadgetDetails = () => {
-  const [products,setProduct] = useContext(DashBoardContext)
+ 
   
   const allGadgetData = useLoaderData();
   const [gadget, setGadget] = useState({});
-  console.log(gadget);
+  const [isCart,setIsCart] = useState(false)
+  const [isWishlist,setIsWishList] = useState(false)
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -21,6 +23,18 @@ const GadgetDetails = () => {
       (gadget) => gadget.id === parseInt(id)
     );
     setGadget(singleGadget);
+    const cartGadget = getToLocalStorage('cart');
+    const isExist = cartGadget.find((cart)=>cart.id===singleGadget.id);
+    if(isExist){
+      setIsCart(true)
+    }
+
+    const wishlistGadget = getToLocalStorage('wishlist')
+    const isExistWishlist = wishlistGadget.find((gadget)=>gadget.id===singleGadget.id)
+    if(isExistWishlist){
+      setIsWishList(true)
+    }
+    
   }, [id, allGadgetData]);
 
   const {
@@ -93,8 +107,8 @@ const GadgetDetails = () => {
             <div>{rating}</div>
           </div>
           <div className="flex gap-3">
-            <button onClick={()=>setToLocalStorage(gadget)} className="btn bg-purple-700 text-white btn-md rounded-2xl">Add to Cart <IoMdCart/></button>
-            <button className="rounded-full btn "><FaRegHeart/></button>
+            <button disabled={isCart} onClick={()=>{setToLocalStorage('cart',gadget); getToLocalStorage('gadget');setIsCart(true)}} className="btn bg-purple-700 text-white btn-md rounded-2xl">Add to Cart <IoMdCart/></button>
+            <button disabled={isWishlist} onClick={()=>{getToLocalStorage('wishlist'); setToLocalStorage('wishlist',gadget);setIsWishList(true)}} className="rounded-full btn "><FaRegHeart/></button>
           </div>
         </div>
       </div>

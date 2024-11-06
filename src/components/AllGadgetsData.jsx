@@ -25,7 +25,7 @@ const AllGadgetsData = () => {
             gadgets.map((gadget)=><GadgetCards key={gadget.id} gadget={gadget}></GadgetCards>)
         }
         <div className='col-span-3'>
-          <button onClick={()=>navigate('/allGadgets')} className='btn'>
+          <button onClick={()=>{navigate('/allGadgets');document.title='Gadget - All Gadget'}} className='btn bg-purple-700 text-white'>
             View Details
           </button>
         </div>

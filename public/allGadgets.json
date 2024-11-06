@@ -323,6 +323,38 @@
         ],
         "availability": true,
         "rating": 4.8
+    },
+    {
+        "id": 21,
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.ibb.co.com/517RQ1s/laptop-surface.jpg",
+        "category": "Laptops",
+        "price": 1300,
+        "description": "Compact and powerful Dell XPS 13.",
+        "specification": [
+            "13.4-inch FHD+ display",
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "id": 22,
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.ibb.co.com/SnZXwwg/dell-img.jpg",
+        "category": "Laptops",
+        "price": 1400,
+        "description": "Compact and powerful Dell XPS 13.",
+        "specification": [
+            "13.4-inch FHD+ display",
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.8
     }
 ]
 
