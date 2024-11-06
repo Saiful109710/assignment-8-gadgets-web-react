@@ -48,8 +48,8 @@ const Cart = () => {
 
     const handlePurchase=(totalPrice)=>{
             setModalOpen(true)
-            setTotalPrice(0);
-            setProducts([]);
+            
+            
             localStorage.removeItem('cart')
             toast.success('Product purchase successfully')
     }
@@ -79,11 +79,11 @@ const Cart = () => {
                             <h3 className="font-bold text-lg">Payment Successfully</h3>
                             <div className="divider px-10"></div>
                             <p className="py-4 font-semibold text-gray-600">Thanks for Purchasing</p>
-                            <p>Total Price:{totalPrice}$</p>
+                            <p className='text-lg font-bold'>Total Price:{totalPrice}$</p>
                             <div className="modal-action justify-center">
                             <form method="dialog">
                                 {/* if there is a button in form, it will close the modal */}
-                                <button className="btn" onClick={()=>{setModalOpen(false);navigate('/') }}>Close</button>
+                                <button className="btn" onClick={()=>{setModalOpen(false);navigate('/');setTotalPrice(0);setProducts([]) }}>Close</button>
                             </form>
                             </div>
                         </div>
