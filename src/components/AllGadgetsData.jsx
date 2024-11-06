@@ -12,7 +12,7 @@ const AllGadgetsData = () => {
 
     useEffect(()=>{
        if(category){
-        const categoryGadgets = [...allGadgetData].filter(gadget=>gadget.category===category);
+        const categoryGadgets = [...allGadgetData].filter(gadget=>gadget.category.split(' ').join('')===category);
         setGadgets(categoryGadgets)
        }else{
           setGadgets(allGadgetData.slice(0,8))

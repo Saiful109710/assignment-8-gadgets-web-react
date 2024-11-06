@@ -3,8 +3,8 @@ import bannerImg from '../assets/banner.jpg'
 
 const Banner = () => {
   return (
-    <div className="relative container mx-auto">
-         <div className="hero bg-[#9538E2] pt-10 pb-52 rounded-xl">
+    <div className=" container mx-auto">
+         <div className="hero  pt-10 pb-52 rounded-xl">
             <div className="hero-content text-center">
                 <div className="max-w-[70%]">
                 <h1 className="text-5xl font-bold text-white">
@@ -19,9 +19,7 @@ const Banner = () => {
                 </div>
             </div>
             </div>
-            <div className="w-[70%] mx-auto h-[500px] p-4 border-4 rounded-2xl backdrop-blur-xl border-white relative -translate-y-[30%] z-30">
-                <img className="w-full h-full object-cover rounded-2xl" src={bannerImg} alt="" />
-            </div>
+           
     </div>
   );
 };

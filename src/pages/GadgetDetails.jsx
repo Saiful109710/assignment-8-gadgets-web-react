@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Heading from "../components/Heading";
 import { IoMdCart } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa";
+import { DashBoardContext } from "../App";
+import { setToLocalStorage } from "../Utility/addToDb";
 
 
 
 const GadgetDetails = () => {
+  const [products,setProduct] = useContext(DashBoardContext)
+  
   const allGadgetData = useLoaderData();
   const [gadget, setGadget] = useState({});
   console.log(gadget);
@@ -41,7 +45,7 @@ const GadgetDetails = () => {
           }
         ></Heading>
       </div>
-      <div className="flex max-w-[70%] mx-auto relative z-30 -translate-y-[50%] p-5 rounded-xl bg-white shadow-lg gap-5">
+      <div className="flex max-w-[70%] mx-auto relative z-30 -translate-y-[35%] p-5 rounded-xl bg-white shadow-lg gap-5">
         <div className="flex items-center">
           <img className="h-[300px] " src={product_image} alt="" />
         </div>
@@ -89,7 +93,7 @@ const GadgetDetails = () => {
             <div>{rating}</div>
           </div>
           <div className="flex gap-3">
-            <button className="btn bg-purple-700 text-white btn-md rounded-2xl">Add to Cart <IoMdCart/></button>
+            <button onClick={()=>setToLocalStorage(gadget)} className="btn bg-purple-700 text-white btn-md rounded-2xl">Add to Cart <IoMdCart/></button>
             <button className="rounded-full btn "><FaRegHeart/></button>
           </div>
         </div>
