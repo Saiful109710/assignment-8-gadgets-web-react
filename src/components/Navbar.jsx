@@ -74,9 +74,9 @@ console.log(pathName)
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-3">
            <NavLink onClick={()=>document.title='Gadget - Home'} to='/' className={({isActive})=>`font-bold ${pathname==='/'|| pathname===`/categories/${pathName}`?'btn btn-sm bg-purple-700 text-white':'btn btn-sm bg-transparent border-none'} ${isActive?'text-purple-200':''}`}>Home</NavLink>
-            <NavLink onClick={()=>document.title='Gadget - Statistics'} to='/statistics' className={({isActive})=>`font-bold  ${isActive?'btn btn-sm bg-purple-700 text-white':'btn btn-sm bg-transparent border-none'}`}>Statisics</NavLink>
-            <NavLink onClick={()=>document.title='Gadget - Dashboard'} to='/dashboard' className={({isActive})=>`font-bold ${isActive?'btn btn-sm bg-purple-700 text-white':'btn btn-sm bg-transparent border-none'}`}>Dashboard</NavLink>
-            <NavLink onClick={()=>document.title='Gadget - Contact'} to='/Contact' className={({isActive})=>`font-bold ${isActive?'btn btn-sm bg-purple-700 text-white':'btn btn-sm bg-transparent border-none'}`}>Contact</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Statistics'} to='/statistics' className={({isActive})=>`font-bold ${pathname==='/'|| pathname===`/categories/${pathName}`?'text-white':''}  ${isActive?'btn btn-sm bg-purple-700 text-white':'btn btn-sm bg-transparent border-none'}`}>Statisics</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Dashboard'} to='/dashboard' className={({isActive})=>`font-bold ${pathname==='/'|| pathname===`/categories/${pathName}`?'text-white':''} ${isActive?'btn btn-sm bg-purple-700 text-white':'btn btn-sm bg-transparent border-none'}`}>Dashboard</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Contact'} to='/Contact' className={({isActive})=>`font-bold ${pathname==='/'|| pathname===`/categories/${pathName}`?'text-white':''} ${isActive?'btn btn-sm bg-purple-700 text-white':'btn btn-sm bg-transparent border-none'}`}>Contact</NavLink>
         </ul>
       </div>
       <div className="navbar-end gap-3">
