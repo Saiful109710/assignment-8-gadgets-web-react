@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar"
 import Banner from "./components/Banner"
 import BannerCard from "./components/BannerCard"
 
-import { createContext, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 
 
 export const PathContext = createContext(null)
@@ -19,7 +19,18 @@ function App() {
   const [products,setProduct] = useState([])
   
   
+useEffect(()=>{
+    const storedPathName = localStorage.getItem('pathName');
+    if(storedPathName ){
+      setPathName(storedPathName)
+    }
+},[])
 
+useEffect(()=>{
+    if(pathName){
+      localStorage.setItem('pathName',pathName)
+    }
+},[pathName])
  
 
  
