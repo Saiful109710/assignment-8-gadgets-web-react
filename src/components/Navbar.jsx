@@ -63,10 +63,10 @@ console.log(pathName)
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-                       <NavLink onClick={()=>document.title='Gadget - Home'} to='/' className={({isActive})=>`font-bold ${isActive?'text-purple-200':''}`}>Home</NavLink>
-            <NavLink onClick={()=>document.title='Gadget - Statistics'} to='/statistics' className={({isActive})=>`font-bold ${isActive?'text-purple-700':''}`}>Statisics</NavLink>
-            <NavLink onClick={()=>document.title='Gadget - Dashboard'} to='/dashboard' className={({isActive})=>`font-bold ${isActive?'text-purple-700':''}`}>Dashboard</NavLink>
-            <NavLink onClick={()=>document.title='Gadget - Contact'} to='/Contact' className={({isActive})=>`font-bold ${isActive?'text-purple-700':''}`}>Contact</NavLink>
+                       <NavLink onClick={()=>document.title='Gadget - Home'} to='/' className={({isActive})=>`font-bold ${isActive?'text-purple-700':'text-black'}`}>Home</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Statistics'} to='/statistics' className={({isActive})=>`font-bold ${isActive?'text-purple-700':'text-black'}`}>Statisics</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Dashboard'} to='/dashboard' className={({isActive})=>`font-bold ${isActive?'text-purple-700':'text-black'}`}>Dashboard</NavLink>
+            <NavLink onClick={()=>document.title='Gadget - Contact'} to='/Contact' className={({isActive})=>`font-bold ${isActive?'text-purple-700':'text-black'}`}>Contact</NavLink>
           </ul>
         </div>
         <NavLink to={'/'} className={({isActive})=>`btn btn-ghost ${pathname==='/'|| pathname === `/categories/${pathName}`?'text-white':''} text-xl ${isActive?'':'text-purple-700'}`}>Gadget Heaven</NavLink>

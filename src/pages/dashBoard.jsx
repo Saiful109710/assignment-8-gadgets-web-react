@@ -23,7 +23,7 @@ const DashBoard = () => {
         <div className='flex justify-center gap-5'>
             <NavLink to="cart">
           {({ isActive }) => (
-            <button onClick={()=>document.title='Gadget - Carts'} className={`btn px-10 rounded-3xl font-bold ${isActive?'bg-white text-purple-700':'bg-transparent text-white'}`}>
+            <button onClick={()=>document.title='Gadget - Carts'} className={`btn px-8  md:px-10 rounded-3xl font-bold ${isActive?'bg-white text-purple-700':'bg-transparent text-white'}`}>
               Cart
             </button>
           )}
@@ -31,7 +31,7 @@ const DashBoard = () => {
           <NavLink to='wishlist'> 
           {
             ({isActive})=>(
-              <button onClick={()=>document.title='Gadget - Wishlists'}  className={`btn   px-10 rounded-3xl  font-bold ${isActive?'bg-white text-purple-700':'bg-transparent text-white'}`}>Wishlist</button>
+              <button onClick={()=>document.title='Gadget - Wishlists'}  className={`  px-8 btn border  md:px-10 rounded-3xl  font-bold ${isActive?'bg-white text-purple-700':'bg-transparent text-white'}`}>Wishlist</button>
             )
           } 
           </NavLink>

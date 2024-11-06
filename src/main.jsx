@@ -7,9 +7,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { router } from './routes/Routes.jsx';
+import toast, { Toaster } from 'react-hot-toast';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}/>
+    <Toaster />
   </StrictMode>,
 )

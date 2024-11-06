@@ -20,11 +20,13 @@ const AllGadgetsData = () => {
     },[category,allGadgetData])
     
   return (
-    <div className='grid grid-cols-3 gap-5'>
+    <div className='space-y-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5'>
         {
             gadgets.map((gadget)=><GadgetCards key={gadget.id} gadget={gadget}></GadgetCards>)
         }
-        <div className='col-span-3'>
+        </div>
+        <div className=''>
           <button onClick={()=>{navigate('/allGadgets');document.title='Gadget - All Gadget'}} className='btn bg-purple-700 text-white'>
             View Details
           </button>

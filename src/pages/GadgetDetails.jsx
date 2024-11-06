@@ -59,8 +59,8 @@ const GadgetDetails = () => {
           }
         ></Heading>
       </div>
-      <div className="flex max-w-[70%] mx-auto relative z-30 -translate-y-[35%] p-5 rounded-xl bg-white shadow-lg gap-5">
-        <div className="flex items-center">
+      <div className="flex flex-col md:flex-row max-w-[90%] md:max-w-[70%] mx-auto relative z-30 -translate-y-[15%] md:-translate-y-[35%] p-5 rounded-xl bg-white shadow-lg gap-5">
+        <div className="flex items-center justify-center">
           <img className="h-[300px] " src={product_image} alt="" />
         </div>
         <div className="space-y-3">
