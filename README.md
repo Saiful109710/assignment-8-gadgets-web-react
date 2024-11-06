@@ -37,3 +37,6 @@ https://assignment-8-gadget-hunter.netlify.app/
 
 ## Private Repo Link:
 https://github.com/Saiful109710/assignment-8-gadgets-web-react
+
+## Figma file Link:
+https://www.figma.com/design/qr7hizhQyfmitEimBC6blK/Assignment-8?node-id=0-1&node-type=canvas&t=7Sr6v8i3wIN015u6-0
