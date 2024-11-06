@@ -36,3 +36,4 @@ You can find the requirement document here: [Requirement Document](https://githu
 https://assignment-8-gadget-hunter.netlify.app/
 
 ## Private Repo Link:
+https://github.com/Saiful109710/assignment-8-gadgets-web-react
