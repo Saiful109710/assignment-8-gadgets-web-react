@@ -3,6 +3,10 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
+      <nav>
+          <h1 className="text-2xl font-bold text-purple-700">Gadget Heaven</h1>
+          <p>Leading the way in cutting-edge technology and innovation.</p>
+      </nav>
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>
@@ -48,8 +52,7 @@ const Footer = () => {
       </nav>
       <aside>
         <p>
-          Copyright © {new Date().getFullYear()} - All right reserved by ACME
-          Industries Ltd
+          Copyright © {new Date().getFullYear()} - All right reserved by Gadget Heaven
         </p>
       </aside>
     </footer>

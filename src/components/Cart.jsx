@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { DashBoardContext } from '../App'
 import CartAndWishListCard from './CartAndWishListCard';
 import { getToLocalStorage, removeFromLocalStorageData, setToLocalStorage } from '../Utility/addToDb';
-import { useNavigate } from 'react-router-dom';
+import { json, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 
@@ -12,6 +12,7 @@ const Cart = () => {
     const [sortStatus,setSortStatus] = useState(true);
     const [totalPrice,setTotalPrice] = useState(0);
     const [isModalOpen,setModalOpen] = useState(false)
+    const [storedTotalPrice,setStoredTotalPrice] = useState(0)
    
 
     useEffect(()=>{
@@ -23,7 +24,20 @@ const Cart = () => {
        const price =  products.reduce((acc,product)=>acc+product.price,0);
        setTotalPrice(price)
       
-       },[products])
+        
+       
+        
+   
+      
+       },[products,])
+
+       useEffect(()=>{
+            if(totalPrice>0){
+                localStorage.setItem('totalPrice',JSON.stringify(totalPrice))
+
+                 setStoredTotalPrice(localStorage.getItem('totalPrice'))
+            }
+       },[totalPrice])
 
   
 
@@ -32,6 +46,8 @@ const Cart = () => {
             removeFromLocalStorageData('cart',id);
             const storedData = getToLocalStorage('cart');
             setProducts(storedData)
+            
+           
             
     }
     const handleSort = (products)=>{
@@ -48,8 +64,8 @@ const Cart = () => {
 
     const handlePurchase=(totalPrice)=>{
             setModalOpen(true)
-            
-            
+            setTotalPrice(0)
+            setProducts([])
             localStorage.removeItem('cart')
             toast.success('Product purchase successfully')
     }
@@ -79,11 +95,11 @@ const Cart = () => {
                             <h3 className="font-bold text-lg">Payment Successfully</h3>
                             <div className="divider px-10"></div>
                             <p className="py-4 font-semibold text-gray-600">Thanks for Purchasing</p>
-                            <p className='text-lg font-bold'>Total Price:{totalPrice}$</p>
+                            <p className='text-lg font-bold'>Total Price:{storedTotalPrice}$</p>
                             <div className="modal-action justify-center">
                             <form method="dialog">
                                 {/* if there is a button in form, it will close the modal */}
-                                <button className="btn" onClick={()=>{setModalOpen(false);navigate('/');setTotalPrice(0);setProducts([]) }}>Close</button>
+                                <button className="btn" onClick={()=>{setModalOpen(false);navigate('/'); }}>Close</button>
                             </form>
                             </div>
                         </div>
